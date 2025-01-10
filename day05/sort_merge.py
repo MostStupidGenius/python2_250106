@@ -46,3 +46,10 @@ def merge(left, right):
     result.extend(right[j:])
 
     return result
+
+if __name__ == "__main__":
+    import random
+    arr = [13, 5, 2, 10, 9, 7, 1]
+    arr = [random.randrange(1, 200) for _ in range(100)]
+    result = merge_sort(arr)
+    print(result)

@@ -31,7 +31,7 @@ def bubble_sort(arr: list) -> list:
                 # dummy = arr[j]
                 # arr[j] = arr[j+1]
                 # arr[j+1] = dummy
-                print(f"i:{i} j:{j}\narr: {arr}\n") 
+                # print(f"i:{i} j:{j}\narr: {arr}\n") 
 
                 # 교환이 일어났으므로 True로 변경
                 swapped = True
