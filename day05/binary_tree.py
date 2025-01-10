@@ -72,15 +72,25 @@ class Binary_tree():
             queue.append(node.left)
             queue.append(node.right)
 
-    # 이진트리 순회
 
+# 이진트리 순회
+# 전위 순회(Preorder -)
+# root의 데이터를 먼저 출력하고
+# 왼쪽 서브트리, 오른쪽 서브트리를 순회
+def preorder(node: Node):
+    # 전달받은 노드가 비어있지 않다면
+    if node:
+        # 서브 트리의 루트를 먼저 출력
+        print(node.data, end=' ')
+        # 서브 트리의 왼쪽을 재귀적으로 preorder 실행
+        preorder(node.left)
+        # 서브 트리의 오른쪽을 재귀적으로 preorder 실행
+        preorder(node.right)
 
 if __name__ == "__main__":
     bt = Binary_tree()
-    bt.insert(3)
-    bt.insert("홍길동")
-    bt.insert("홍길동2")
-    bt.insert("홍길동3")
-    bt.insert("홍길동4")
-    print(bt.root)
+    for i in range(15):
+        bt.insert(i)
+    # print(bt.root)
+    preorder(bt.root)
 
